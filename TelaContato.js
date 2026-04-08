@@ -1,53 +1,62 @@
 import React, { useState } from 'react';
-import { View, TextInput, Text, Button, ScrollView, TouchableOpacity } from
-'react-native';
-import { MaterialCommunityIcons } from 'react-native-vector-icons' ;
-import styles from './Styles'
-function TelaContato({navigation}){
-  const [text_nome, setText_nome] = useState('');
-  const [text_email, setText_email]= useState('');
-  const [message, setMessage] =
-useState('');
-return (
-  <View  style={styles.container_contato}> 
-<View style={styles.container_icone_voltar_contato}>
+import { View, TextInput, Text, TouchableOpacity } from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import styles from './Styles';
 
-<TouchableOpacity onPress={() => navigation.goBack()}>
-<MaterialCommunityIcons name='keyboard-backspace' size={40}
-color='red'/>
-</TouchableOpacity>
-</View>
+function TelaContato({ navigation }) {
 
-<View style={styles.view_texto_contato}>
-<Text style={styles.texto_contato}>  enter your email and password </Text>
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
 
-</View>
+  return (
+    <View style={styles.container_contato}>
 
-<View>
-<TextInput
-style={styles.input_contato}
-placeholder=" enter your email..."
-placeholderTextColor = 'gray'
-value={text_email}
-onChangeText={setText_email}
-/>
+      <View style={styles.card}>
 
+        {/* Logo */}
+        <View style={styles.logoContainer}>
+          <MaterialCommunityIcons 
+            name="map-marker" 
+            size={40} 
+            color="#8e2de2" 
+          />
+          <Text style={styles.logoText}>SafeHer</Text>
+        </View>
 
-</View>
-<TextInput
-style={styles.input_contato}
-placeholder="enter password..."
-placeholderTextColor = 'gray'
-value={text_nome}
-onChangeText={setText_nome}
-/>
+        {/* Input Email */}
+        <TextInput
+          style={styles.input_contato}
+          placeholder="E-mail"
+          value={email}
+          onChangeText={setEmail}
+        />
 
+        {/* Input Senha */}
+        <TextInput
+          style={styles.input_contato}
+          placeholder="Senha"
+          value={senha}
+          onChangeText={setSenha}
+          secureTextEntry
+        />
 
+        {/* Botão */}
+        <TouchableOpacity 
+          style={styles.botao}
+          onPress={() => alert('Entrou')}
+        >
+          <Text style={styles.texto_botao}>Entrar</Text>
+        </TouchableOpacity>
 
-<View>
-<Button title="sign in" onPress={() => {alert ('')}}  />
-</View>
-</View>
-);
+        {/* Criar conta */}
+        <TouchableOpacity style={styles.criarConta}>
+          <Text style={styles.texto_criar}>Criar conta</Text>
+        </TouchableOpacity>
+
+      </View>
+
+    </View>
+  );
 }
+
 export default TelaContato;

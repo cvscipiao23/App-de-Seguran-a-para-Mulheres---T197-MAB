@@ -1,91 +1,66 @@
 import { StyleSheet } from 'react-native';
+
 const styles = StyleSheet.create({
-container: {
-flex: 1,
-backgroundColor:'pink',
-justifyContent: 'center',
-alignItems: 'center',
-},
-texto: {
-fontSize: 29,
-color : 'white',
-fontWeight : 'bold',
 
+container_contato: {
+  flex: 1,
+  backgroundColor: 'pink',
+  justifyContent: 'center',
+  alignItems: 'center',
 },
-nome: {
-  fontSize: 15,
+
+card: {
+  width: '85%',
+  backgroundColor: 'pink',
+  borderRadius: 25,
+  padding: 20,
+  elevation: 5,
+},
+
+logoContainer: {
+  alignItems: 'center',
+  marginBottom: 20,
+},
+
+logoText: {
+  fontSize: 28,
+  fontWeight: 'bold',
+  color: '#8e2de2',
+},
+
+input_contato: {
+  height: 50,
+  backgroundColor: '#eee',
+  borderRadius: 10,
+  marginBottom: 15,
+  paddingHorizontal: 15,
+},
+
+botao: {
+  backgroundColor: '#8e2de2',
+  height: 50,
+  borderRadius: 10,
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginTop: 10,
+},
+
+texto_botao: {
   color: 'white',
-  alignItems: 'center'
-},
-imagem: {
-width: 150,
-height: 150,
-resizeMode: 'cover',
-borderRadius: 150,
-borderWidth: 3,
-borderColor:'white',
-alignSelf: 'center',
-},
-botao:{
-backgroundColor: 'purple',
-width: 100,
-height: 40,
-alignItems: 'center',
-justifyContent: 'center',
-borderRadius: 10,
-},
-botao2:{
-backgroundColor: 'purple',
-width: 100,
-height: 40,
-alignItems: 'center',
-justifyContent: 'center',
-borderRadius: 10,
-},
-texto_instituicao:{
-color:'white',
-textDecorationLine:'underline',
-},
-idade: {
-  fontSize: 12,
-  color: 'white'
-},
-container_contato:{
-flex: 1,
-padding: 20,
-backgroundColor: 'black',
-},
-container_icone_voltar_contato:{
-alignItems:'flex-start',
-},
-view_texto_contato:{
-alignItems: 'center',
-},
-texto_contato:{
-color:'red',
-fontWeight: 'bold',
-padding: 10,
-fontSize: 25,
-},
-input_contato:{
-height: 40,
-borderColor: 'white',
-borderWidth: 1,
-marginBottom: 20,
-paddingLeft: 10,
-},
-input_contato_scrowlView:{
-borderColor: 'white',
-borderWidth: 1,
-marginBottom: 20,
-paddingLeft: 10,
-},
-textarea: {
-height: 150,
-textAlignVertical: 'top',
-marginBottom: 15,
+  fontWeight: 'bold',
+  fontSize: 16,
 },
 
+criarConta: {
+  marginTop: 15,
+  alignItems: 'center',
+},
+
+texto_criar: {
+  color: '#6a1b9a',
+  textDecorationLine: 'underline',
+},
 
 });
+
 export default styles;
